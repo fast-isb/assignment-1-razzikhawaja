@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Navbar, Button, Link, Text,Grid } from "@nextui-org/react";
+import { Layout } from "./Layout.jsx";
+import ContentCard from "./ContentCard.jsx"
 
-function App() {
+export default function App() {
+  
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+    <Layout>
+      <Navbar isBordered variant="floating">
+        <Navbar.Brand>
+          <Text b color="inherit" hideIn="xs">
+            App
+          </Text>
+        </Navbar.Brand>
+        <Navbar.Content hideIn="xs">
+          <Navbar.Link href="#">View Houses</Navbar.Link>
+          <Navbar.Link isActive href="#">Add House</Navbar.Link>
+          
+        </Navbar.Content>
+        <Navbar.Content>
+          <Navbar.Link color="inherit" href="#">
+            Login
+          </Navbar.Link>
+          <Navbar.Item>
+            <Button auto flat as={Link} href="#">
+              Sign Up
+            </Button>
+          </Navbar.Item>
+        </Navbar.Content>
+      </Navbar>
+        
+    </Layout>
+    <Grid.Container gap={10}>
+      <ContentCard></ContentCard>
 
-export default App;
+    </Grid.Container>
+    </>
+  )
+}
