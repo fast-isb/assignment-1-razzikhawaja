@@ -6,7 +6,7 @@ var app=express();
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
-const port = 5001
+const port = 5000
 
 
 app.get('/', (req, res) => {
