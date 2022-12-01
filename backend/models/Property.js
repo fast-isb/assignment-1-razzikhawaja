@@ -1,6 +1,6 @@
 import {mongoose} from 'mongoose'
 
-mongoose.connect('mongodb://localhost:27017/scdProject');
+mongoose.connect('mongodb://127.0.0.1:27017/scd');
 const Schema = mongoose.Schema;
 const House = new Schema({
     hNo : { type : String, required : true, max : [127, "Max Length is 127 characters"] },
