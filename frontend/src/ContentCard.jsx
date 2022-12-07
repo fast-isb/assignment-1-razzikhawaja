@@ -8,7 +8,7 @@ export default function App() {
     const [blockN,setBlockN]=useState(0);
 
     const createHouse=()=>{
-      Axios.post('http://localhost:5000/create/',{
+      Axios.post('http://54.238.231.117:5000/create/',{
         
          desc: desc,
          type:type,
