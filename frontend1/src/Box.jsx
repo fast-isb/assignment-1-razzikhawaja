@@ -4,4 +4,3 @@ export const Box = styled("div", {
   boxSizing: "border-box",
 });
 
-//rkvghrj
